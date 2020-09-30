@@ -27,8 +27,6 @@ export default class Upload extends React.Component {
         }
     }
     drawPicture = (base64) => {
-        console.log('base64');
-        console.log(base64);
         this.setState({
             url: base64
         })
@@ -49,8 +47,6 @@ export default class Upload extends React.Component {
         event.stopPropagation();
         event.preventDefault();
         var file = event.dataTransfer.items[0].getAsFile();
-        console.log('file', file);
-        // this.getBase64(file, this.drawPicture);
         this.errorHandler(file, () => {
             this.getBase64(file, this.drawPicture);
         } );
@@ -58,9 +54,6 @@ export default class Upload extends React.Component {
     onDragOver = (event) => {
         event.stopPropagation();
         event.preventDefault();
-        // console.log(event.dataTransfer.items[0],
-        // event.dataTransfer.getData("base64"));
-        // event.dataTransfer.items[0].getAsFile());
     }
     render() {
         return (
