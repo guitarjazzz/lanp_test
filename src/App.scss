@@ -1,0 +1,116 @@
+@import "scss/reset";
+
+body {
+  background-color: #f5f9ff;  
+  font-family: 'Proxima Nova', 'Raleway', sans-serif;
+}
+.App {
+  text-align: center;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.Header-HeaderLine {
+  font-size: 12px;
+  text-align: left;
+  padding: 5%;
+  line-height: 1.5;
+  border-bottom: 1px solid #E8F1FB;
+}
+.Header-HeaderLine_bold {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  // background-color: #f5f9ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Main {
+  flex-grow: 1;
+  padding: 5%;
+  display: flex;
+}
+.DraggableArea {
+  background-color: #F5F9FF; 
+  border: 1px dashed #4991E5;
+  min-height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.DraggableArea-Bg {
+  // background: url('img/company_logo.svg') no-repeat 50%/40% #fff;
+  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  border: 1px solid #D1E3F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.DraggableArea-Logo {
+  height: 100%;
+}
+.DraggableArea-Text {
+  font-size: 12px;
+  line-height: 2;
+  padding: 5px 0;
+  > span {
+    display: block;
+  }
+}
+.DraggableArea-Text-Top {
+  color: #324964;
+}
+.DraggableArea-Text-Divider {
+  color: #6B85A3;
+}
+.DraggableArea-Link {
+  color: #4991E5;
+  cursor: pointer;
+  padding: 10px 15px;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: darken(#4991E5, 20%);
+  }
+}
+.DraggableArea-Input {
+  display: none;
+}

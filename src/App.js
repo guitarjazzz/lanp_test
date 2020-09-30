@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Upload from './Upload';
+// import bg from './img/company_logo.png';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="Header">
+        <h1 className="Header-HeaderLine">
+          <b className="Header-HeaderLine_bold">Company Logo</b>
+          Logo should be square, 100px size and in png, jpeg file format.
+        </h1>
       </header>
+      <Upload/>
     </div>
   );
 }
